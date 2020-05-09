@@ -1,0 +1,32 @@
+.main-view{
+    width: 90%;
+    margin: auto;
+}
+
+.board-outer{
+    border: 2px solid #000000;
+    width: 98%;
+    margin: auto;
+}
+
+.board-row{
+    display: flex;
+}
+
+.cell-round, .cell-team, .cell-player{
+    text-align: center;
+}
+
+.player-name{
+    font-weight: 800;
+}
+
+.player-pos{
+    font-weight: 400;
+}
+
+.player-num{
+    font-weight: 200;
+    text-align: right;
+    padding-right: 3%;
+}
