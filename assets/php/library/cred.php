@@ -2,5 +2,5 @@
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "root";
-$db = "mkhockey";
+$db = "mkhockey_draft";
 ?>

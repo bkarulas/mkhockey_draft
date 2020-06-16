@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+
+    <!--Document Information-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MK Hockey League</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>-->
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/nav.css" />
+        <script  src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+    </head>
+
+    <body>
+<!--NAV-->
+        <nav class="topnav" id="myTopnav">
+            <div>
+                <a href="#" onclick="menuClick('board')">BOARD</a>
+                <a href="#" onclick="menuClick('roster')">TEAMS</a>
+                <a href="#" onclick="menuClick('undrafted')">UNDRAFTED</a>
+                <a href="#" onclick="menuClick('rules')">RULES</a>
+                <a href="#" onclick="menuClick('home')">ADMIN</a>
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" id="myMenuFunction">&#9776;</a>
+            </div>
+        </nav>
+
+<!--TITLE-->
+        <section id = "jumbo" class="jumbotron jumbotron-fluid">
+            <div class="main-view">
+                <a href="#" onclick="menuClick('adminhome')"><img class="img-fluid" src="./assets/images/logo/title.png" alt="MK Draft"></a>
+                <h1>2020</h1>
+            </div>
+        </section>
+
+<!--DRAFT BAR-->
+        <section id="draft-bar">
+            <div class="main-view">
+                <div class="notcurrentpick">
+                    <div class='bar-subtitle'>Last Pick</div>
+                    <div id="past-pick"></div>
+                </div>
+                <div class="currentpick">
+                    <div class='bar-subtitle'>On The Clock</div>
+                    <div id="current-pick">Current Pick</div>
+                </div>
+                <div class="notcurrentpick">
+                    <div class='bar-subtitle'>Next Pick</div>
+                    <div id="next-pick">Next Pick</div>
+                </div>
+            </div>
+        </section>
+
+<!--HOME-->
+        <section id="admin-home" class='main-view'>
+            <div><h1>WELCOME TO THE MK HOCKEY 2020 DRAFT</h1></div>
+            <div class='info'>The date and time of the 2020 MK Hockey League draft has not been determined yet, but we will update you as soon as we have more information regarding the MK Hockey 2020 Summer Season.</div>
+            <div class="logo">
+                <img class="img-fluid" src="./assets/images/logo/mkdraft_2020_logo.png" alt="2020 Draft">
+            </div>
+        </section>
+
+<!--DRAFT BOARD-->
+        <section id='the-draft-board'>
+            <div class='main-view'>
+                <div class="board-outer">
+                    <div id="board-title"></div>
+                    <div id="board-rounds"></div>
+                </div>
+            </div>
+        </section>
+
+<!--TEAM ROSTERS-->
+        <section id="team-rosters" class="main-view">
+            <div class='team-outline' id='team1'>
+                <div id='team-name1'></div>
+                <div id='goalie1'></div>
+                <div id='defense1'></div>
+                <div id='forward1'></div>
+            </div>
+            <div class='team-outline' id='team2'>
+                <div id='team-name2'></div>
+                <div id='goalie2'></div>
+                <div id='defense2'></div>
+                <div id='forward2'></div>
+            </div>
+            <div class='team-outline' id='team3'>
+                <div id='team-name3'></div>
+                <div id='goalie3'></div>
+                <div id='defense3'></div>
+                <div id='forward3'></div>
+            </div>
+            <div class='team-outline' id='team4'>
+                <div id='team-name4'></div>
+                <div id='goalie4'></div>
+                <div id='defense4'></div>
+                <div id='forward4'></div>
+            </div>
+        </section>
+
+<!--UNDRAFTED PLAYERS-->
+        <section id='undrafted' class="main-view">
+            <div class='undraft-col'>
+                <div class="teamname">DEFENSE</div>
+                <div id="undraft2"></div>
+            </div>
+            <div class='undraft-col'>
+                <div class="teamname">FORWARDS</div>
+                <div id="undraft3"></div>
+            </div>
+            <div class='undraft-col'>
+                <div class="teamname">DEFENSE/FORWARDS</div>
+                <div id="undraft4"></div>
+            </div>
+        </section>
+
+<!--ADMIN-->
+        <section id="home" class="main-view">
+            <h1>ADMINISTRATOR</h1>
+            <section id="draftplayers">
+                <div class="row">
+                  <div class="col-4 offset-1">
+                    <h3>Draft Player</h3>
+                  </div>
+                  <div class="col-6 offset-1">
+                    <form id="draftmenu">
+                      <select id="draft-dropdown"></select>
+                      <input id="draft-button" />
+                    </form>
+                  </div>
+                </div>
+              </section>  
+                <hr>
+        </section>
+
+        <script src="assets/js/nav.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src='assets/js/draftbar.js'></script>
+        <script src="assets/js/board.js"></script>
+        <script src="assets/js/teams.js"></script>
+        <script src="assets/js/undrafted.js"></script>
+        <script src='assets/js/admin.js'></script>
+    </body>
+</html>

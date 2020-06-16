@@ -3,30 +3,406 @@
     margin: auto;
 }
 
+/*JUMBOTRON*/
+.jumbotron{
+    background-image: url("../images/background/background2.jpg");
+    border-top: 3rem solid #000000;
+    border-bottom: 3rem solid #000000;
+    padding: 0px;
+}
+
+.jumbotron .main-view{
+    text-align: center;
+}
+
+.jumbotron h1{
+    color:#d5202b;
+    font-size: 4rem;
+    font-family: 'Bungee', cursive;
+    font-weight: 200px;
+}
+
+.jumbotron img{
+    padding-bottom: 0px;
+    margin-bottom: -20px;
+}
+
+/*HOME*/
+#home h1{
+    text-align: center;
+}
+
+#home .info{
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.logo{
+    margin: auto;
+    width: 40%;
+    
+}
+
+/*DRAFT BAR*/
+#draft-bar{
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 4rem;;
+}
+
+#draft-bar .main-view{
+    display: flex;
+}
+
+.bar-subtitle{
+    font-size: .8rem;
+}
+
+.notcurrentpick, .currentpick{
+    text-align: center;
+}
+
+.currentpick{
+    width: 40%;
+    font-size: 2rem;
+}
+
+.notcurrentpick{
+    padding-top: .2rem;
+    width: 30%;
+    font-size: 1.5rem;
+    color: #e0e0e0;
+}
+
+#draft-bar .picknum{
+    font-size: 1rem;
+}
+
+
+/*DRAFT BOARD*/
 .board-outer{
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     width: 98%;
     margin: auto;
 }
 
 .board-row{
     display: flex;
+    height: 90px;
+}
+#board-title{
+    height: 70px;
+    font-size: 2rem;
+    font-weight: 800;
+    background-color: #f6f6f6;
+    color: #004417;
+
+}
+
+.cell-round{
+    font-size: 2rem;
+    font-weight: 800;
+    padding-top: 15px;
+    background-color: #f6f6f6;
+    color: #004417;
 }
 
 .cell-round, .cell-team, .cell-player{
     text-align: center;
+    border: 1px solid #000000;
 }
 
 .player-name{
+    font-size: 1.5rem;
     font-weight: 800;
 }
 
 .player-pos{
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
 .player-num{
+    font-size: .7rem;
     font-weight: 200;
     text-align: right;
     padding-right: 3%;
 }
+
+.no-pick .player-num{
+    padding-top: 65px;
+}
+
+#team-rosters, #undrafted{
+    display: flex;
+}
+.team-outline{
+    width: 22.5%;
+    margin: auto;
+    border-bottom: 1px solid #000000;
+}
+.teamname{
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+    height: 50px;
+    background-color: #f6f6f6;
+    color: #004417;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+}
+.team-goalie, .team-defense, .team-forward, .emptpy-pos{
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    font-size: 1.5rem;
+    height: 45px
+}
+
+.roster-pos{
+    width: 30%;
+    text-align: center;
+}
+
+.roster-name{
+    width: 65%;
+    
+}
+
+.team-goalie{
+    background-color: #fea3aa;
+}
+.defense, .team-defense, #undraft2 .undraftedplayer{
+    background-color: #ffe9a6;
+}
+.forward, .team-forward,#undraft3 .undraftedplayer{
+    background-color: #a9dba9;
+}
+.def-for, #undraft4 .undraftedplayer{
+    background-color: #7bd7fd;
+}
+.no-pick, .emptpy-pos{
+    background-color: #d3d3d3;
+}
+
+/*TEAMS*/
+
+/*UNDRAFTED*/
+
+.undraft-col{
+    width: 30%;
+    margin: auto;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.undraftedplayer{
+    margin-bottom:.7rem;
+    padding-left: 1.25rem;;
+    border: 1px solid #000000;
+    font-size: 2rem;
+}
+
+
+
+
+
+/*MEDIA STYLE*/
+
+@media screen and (max-width: 1460px){
+    .teamname{
+        font-size: 1.5rem;
+        height: 40px;
+    }
+    .team-goalie, .team-defense, .team-forward, .emptpy-pos{
+        font-size: 1.05rem;
+        height: 35px
+    }
+    .undraftedplayer{
+        padding-left: 1rem;;
+        border: 1px solid #000000;
+        font-size: 1.6rem;
+    }
+
+}
+
+
+
+@media screen and (max-width: 992px){
+    .board-row{
+        height: 80px;
+    }
+
+    #board-title{
+        height: 60px;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .cell-round{
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding-top: 15px;
+    }
+
+    .player-name{
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding-top: 7px;
+    }
+    
+    .player-pos{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    .player-num{
+        font-size: .6rem;
+        font-weight: 200;
+    }
+
+    .no-pick .player-num{
+        padding-top: 58px;
+    }
+
+    .teamname{
+        font-size: 1.2rem;
+        height: 35px;
+    }
+    .team-goalie, .team-defense, .team-forward, .emptpy-pos{
+        font-size: .8rem;
+        height: 30px
+    }
+    .undraftedplayer{
+        margin-bottom:.6rem;
+        padding-left: .9rem;;
+        font-size: 1.3rem;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .board-row{
+        height: 60px;
+    }
+
+    #board-title{
+        height: 50px;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .cell-round{
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding-top: 10px;
+    }
+
+    .player-name{
+        font-size: .9rem;
+        font-weight: 700;
+        padding-top: 5px;
+    }
+    
+    .player-pos{
+        font-size: .7rem;
+        font-weight: 400;
+    }
+    
+    .player-num{
+        font-size: .5rem;
+        font-weight: 200;
+    }
+
+    .no-pick .player-num{
+        padding-top: 43px;
+    }
+
+    
+    #team-rosters{
+        display: block;
+
+}
+    .team-outline{
+        width:40%;
+    }
+
+    .teamname{
+        font-size: 1rem;
+        height: 30px;
+        margin-top: .5rem;
+        margin-bottom: .05rem;
+    }
+    .team-goalie, .team-defense, .team-forward, .emptpy-pos{
+        font-size: .8rem;
+        height: 25px
+    }
+    
+    .undraftedplayer{
+        margin-bottom:.5rem;
+        padding-left: .5rem;;
+        font-size: .9rem;
+    }
+
+
+}
+
+@media screen and (max-width: 576px){
+    .board-row{
+        height: 45px;
+    }
+
+    #board-title{
+        height: 30px;
+        font-size: .9rem;
+        font-weight: 600;
+    }
+
+    .cell-round{
+        font-size: .9rem;
+        font-weight: 600;
+        padding-top: 10px;
+    }
+
+    .player-name{
+        font-size: .5rem;
+        font-weight: 700;
+        padding-top: 5px;
+    }
+    
+    .player-pos{
+        font-size: .5rem;
+        font-weight: 400;
+    }
+    
+    .player-num{
+        font-size: .4rem;
+        font-weight: 200;
+    }
+
+    .no-pick .player-num{
+        padding-top: 30px;
+    }
+    .teamname{
+        font-size: .6rem;
+        height: 20px;
+    }
+    .team-goalie, .team-defense, .team-forward, .emptpy-pos{
+        font-size: .6rem;
+        height: 20px
+    }
+    .undraftedplayer{
+        margin-bottom:.4rem;
+        padding-left: .3rem;;
+        font-size: .5rem;
+    }
+    
+}
+
+
